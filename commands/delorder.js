@@ -16,7 +16,7 @@ exports.run = (client, msg, args) => {
         new Discord.RichEmbed()
         .setColor("#FF0000")
         .setTitle("Order deleted")
-        .setDescription("Order ID " + oid + " has been deleted by " + msg.author.username + " for reason `" + reason + "`")
+        .setDescription("Order ID **" + oid + "** has been deleted by **" + msg.author.tag + "** for reason `" + reason + "`")
         .setAuthor(msg.author.username, msg.author.displayAvatarURL)
     )
     client.users.get(orders[oid].member).send("Your order has been deleted by " + msg.author.username + " for reason `" + reason + "`")
